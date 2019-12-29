@@ -66,5 +66,17 @@ dist-> index.html, main.js(not minified too)
 6.
 //npm run build
 
-dist--> index.html, main.5a2f----.js (minified too)
+dist--> index.html, main.5a2f----40.js (minified too)
 
+7. DEV-SERVER
+
+npm install --save-dev webpack-dev-server
+
+8.
+
+"scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+
+  

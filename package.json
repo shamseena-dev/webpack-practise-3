@@ -4,7 +4,7 @@
   "description": "webpack practise",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.dev.js",
+    "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "author": "",
@@ -23,6 +23,7 @@
     "style-loader": "^1.1.2",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2"
   }
 }
