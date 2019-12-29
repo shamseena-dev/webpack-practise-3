@@ -165,7 +165,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
  SOME ERRORS---it said its nota constructr
 
  so UNINSTALLED  IT=
- 
+
  //npm uninstall  clean-webpack-plugin//
 
 REFERED=== https://www.npmjs.com/package/webpack-cleanup-plugin
@@ -173,5 +173,12 @@ REFERED=== https://www.npmjs.com/package/webpack-cleanup-plugin
 
 
  installed 
+ ------------
 
  var CleanWebpackPlugin = require("webpack-cleanup-plugin");
+
+plugins : [new CleanWebpackPlugin()];
+
+------------
+================COMMIT 6========================================
+
