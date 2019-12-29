@@ -79,4 +79,71 @@ npm install --save-dev webpack-dev-server
     "build": "webpack --config webpack.prod.js"
   },
 
-  
+
+
+9.npm start// compiled succesfully,BUT LIVE SERVER DIDNT WORK FOR ME :(
+
+10. npm run build //works ---but image didnt load
+
+11. IMAGES
+-------------
+
+11.a) HTML-LOADER====
+
+//npm install --save-dev html-loader //
+
+--it helps to require all images (automatically)  it see ..
+--------------------------------
+{
+		 	test: /\.html$/,
+		 	use:["html-loader"]
+		 }
+-------------------------------
+
+//npm run build//
+==>>ERROR
+
+11 .b) FILE_LOADER
+ tells WP how to handle these required images
+
+ //npm install --save-dev file-loader//
+------------------------
+{
+		 	test:/\.(svg|png|jpg|gif)$/,
+		 	use: {
+		 		loader: "file-loader",
+		 		options: {
+		 			name:"[name].[hash].[ext]",
+		 			outputPath: "imgs"
+		 		}
+		 	}
+		 }
+----------------------------
+12.. npm start==some ERROR< ok
+corrected thispath in template.html==> <img src= "../images/travel.jpg">
+
+earlier ==<img src= "./src/images/travel.jpg">
+
+13.. so dist/imgs(NEW) /travel.5d4c9----.jpg (NEW)
+
+YESSSSSSS
+
+14.. && dist/index.html becomes
+-------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webpack demo</title>
+</head>
+<body>
+	<h1 id="title">WEBPACK PRACTISE</h1>
+	<img src= "[object Module]">   ----------------//CHECK
+	<p id="text"> webpack paragraph text</p>
+<!--<script type="text/javascript" src= "./dist/main.js"></script>-->
+<!--<script type="text/javascript" src= "./src/app/index.js"></script>
+<script type="text/javascript" src= "./src/app/second.js"></script>
+<script type="text/javascript" src= "./src/app/third_depOnSecond.js"></script>-->
+
+<script type="text/javascript" src="main.5a2f9f8989922d955e40.js"></script></body>
+</html>
+--------------------------------------------------------------------------------------
