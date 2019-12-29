@@ -147,3 +147,31 @@ YESSSSSSS
 <script type="text/javascript" src="main.5a2f9f8989922d955e40.js"></script></body>
 </html>
 --------------------------------------------------------------------------------------
+====================COMMIT 5==============================
+
+15. CLEAN-WEBPACK
+
+15.a)//npm install --save-dev clean-webpack-plugin
+
+15.b) webpack.prod.js
+-------------------------------------------------------------
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+
+- - - - - - -
+ plugins : [new CleanWebpackPlugin()];
+
+ _------------------------------------------------------------------
+
+ SOME ERRORS---it said its nota constructr
+
+ so UNINSTALLED  IT=
+ 
+ //npm uninstall  clean-webpack-plugin//
+
+REFERED=== https://www.npmjs.com/package/webpack-cleanup-plugin
+//npm install webpack-cleanup-plugin --save-dev //
+
+
+ installed 
+
+ var CleanWebpackPlugin = require("webpack-cleanup-plugin");
